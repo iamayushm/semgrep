@@ -77,7 +77,7 @@ class FilesNotFoundError(SemgrepError):
     paths: Sequence[Path]
 
     def __str__(self) -> str:
-        lines = (f"File not found: {pathname}" for pathname in self.paths)
+        lines = (f"File not found: {self.paths}" for pathname in self.paths)
         return "\n".join(lines)
 
 
